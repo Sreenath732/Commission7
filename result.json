@@ -1,0 +1,1 @@
+{ "field" : [ { "result" : "success" }, { "Description" : "Data is logging 20 miliseconds per packet into data_table on DATA_PORT = 47777" } ] }
