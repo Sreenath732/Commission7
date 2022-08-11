@@ -1,0 +1,16 @@
+version: 2.1
+
+jobs:
+  test:
+    working_directory: ~/home/sreenath/Music/git/Commission7
+    
+    steps:
+      - checkout
+      - run: ./commissioning.sh
+
+workflows:
+  build_and_test:
+    jobs:
+      - test:
+          requires:
+            - build
