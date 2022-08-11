@@ -1,13 +1,7 @@
 version: 2.1
 
 jobs:
-  build:
-    working_directory: ~/commission7
-    docker:
-      - image: "commission7"
-    steps:
-      - checkout
-      - run: ./commissioning.sh
+  
   test:
     working_directory: ~/commission7
     docker:
@@ -17,9 +11,8 @@ jobs:
       - run: ./commissioning.sh
 
 workflows:
-  build_and_test:
+  test:
     jobs:
-      - build
       - test:
           requires:
-            - build
+            - commissioning.sh
