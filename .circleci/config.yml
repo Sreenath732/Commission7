@@ -5,7 +5,7 @@ jobs:
   test:
     working_directory: ~/commission7
     docker:
-      - image: "commission7/c++"
+      - image: "circleci"
     steps:
       - checkout
       - run: ./commissioning.sh
