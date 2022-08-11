@@ -12,7 +12,7 @@ jobs:
 
 workflows:
   test:
-    jobs:
-      - test:
-          requires:
-            - commissioning.sh
+    jobs: 
+      - test
+  
+          
