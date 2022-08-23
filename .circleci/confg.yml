@@ -5,4 +5,4 @@ jobs:
          -image:circleci/Commission7
       steps:
          - checkout
-         - run: ./configuration.sh
+         - run: ./commissioning.sh
