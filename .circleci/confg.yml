@@ -3,6 +3,6 @@ jobs:
   build:
      docker:
          -image:circleci/node:4.8.2
-      steps:
+     steps:
          - checkout
          - run: ./commissioning.sh
