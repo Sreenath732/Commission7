@@ -1,8 +1,10 @@
 version: 2.1
+
 jobs:
   build:
-     docker:
-         -image:circleci/Commission7
-     steps:
-         - checkout
-         - run: ./commissioning.sh
+    working_directory: ~/circleci-python
+    docker:
+      - image: "circleci/python:3.6.4"
+    steps:
+      - checkout
+      - run: ./commissioning.sh
