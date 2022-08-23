@@ -1,16 +1,8 @@
-version: 2.1
-
+version: 2
 jobs:
-  test:
-    working_directory: ~/home/sreenath/Music/git/Commission7
-    
-    steps:
-      - checkout
-      - run: ./commissioning.sh
-
-workflows:
-  build_and_test:
-    jobs:
-      - test:
-          requires:
-            - build
+  build:
+     docker:
+         -image:circleci/Commission7
+      steps:
+         - checkout
+         - run: ./configuration.sh
